@@ -5,6 +5,12 @@ this is an application to manage everything about the wild oasis hotel:booking ,
 This is the internal application used inside the
 hotel to check in guests as they arrive
 
+# Technology
+
+### styling
+
+- Styled Components libarary which is very popular way of whriting components-scoped css,right inside javascript
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

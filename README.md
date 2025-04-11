@@ -15,6 +15,10 @@ hotel to check in guests as they arrive
 
 - standard for react SPAs
 
+### other tools
+
+- react icons
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import {
-  HiBattery50,
   HiOutlineCalendarDays,
   HiOutlineCog6Tooth,
   HiOutlineHome,

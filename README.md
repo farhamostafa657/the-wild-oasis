@@ -11,7 +11,7 @@ hotel to check in guests as they arrive
 
 - Styled Components libarary which is very popular way of whriting components-scoped css,right inside javascript
 
-### react-roter-dom
+### react-router-dom
 
 - standard for react SPAs
 

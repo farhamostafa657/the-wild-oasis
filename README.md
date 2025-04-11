@@ -11,6 +11,10 @@ hotel to check in guests as they arrive
 
 - Styled Components libarary which is very popular way of whriting components-scoped css,right inside javascript
 
+### react-roter-dom
+
+- standard for react SPAs
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

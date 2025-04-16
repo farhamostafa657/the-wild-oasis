@@ -15,9 +15,17 @@ hotel to check in guests as they arrive
 
 - standard for react SPAs
 
+### Supabase
+
+- building a backend using supabase
+
+### React Query
+
+- for managing all remote state like fetching the data from the server
+
 ### other tools
 
-- react icons
+- react icons /date-fns
 
 # React + Vite
 

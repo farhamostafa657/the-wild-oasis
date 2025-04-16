@@ -23,9 +23,13 @@ hotel to check in guests as they arrive
 
 - for managing all remote state like fetching the data from the server
 
+### React Hook Form
+
+- for handle the forms in the website
+
 ### other tools
 
-- react icons /date-fns
+- react icons /date-fns /react-hot-toast
 
 # React + Vite
 

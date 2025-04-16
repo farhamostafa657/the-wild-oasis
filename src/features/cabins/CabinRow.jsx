@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styled from "styled-components";
 import { formatCurrency } from "../../utils/helpers";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { deleteCabin } from "../../services/apiCabins";
+import toast from "react-hot-toast";
 
 const TableRow = styled.div`
   display: grid;
@@ -59,8 +61,9 @@ function CabinRow({ cabin }) {
       queryClient.invalidateQueries({
         queryKey: ["cabins"],
       });
+      toast.success("Cabin deleted succussfly");
     },
-    onError: (error) => alert(error.message),
+    onError: (error) => toast.error(error.message),
   });
   return (
     <TableRow>

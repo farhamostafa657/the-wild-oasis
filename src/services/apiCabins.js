@@ -42,6 +42,7 @@ export async function createEditCabin(newCabin, id) {
 
   //upload image
   // Use the JS library to download a file.
+  if (hasImagePath) return data;
 
   const { error: storageError } = await supabase.storage
     .from("cabun-image")

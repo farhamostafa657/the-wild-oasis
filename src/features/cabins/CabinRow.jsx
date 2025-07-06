@@ -7,6 +7,10 @@ import { deleteCabin } from "../../services/apiCabins";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import CreateCabinForm from "./CreateCabinForm";
+import { useDeleteCabin } from "./useDeleteCabin";
+import { HiPencil, HiSquare2Stack, HiTrash } from "react-icons/hi2";
+import { useCabines } from "./useCabins";
+import { useCreateCabin } from "./useCreateCabin";
 
 const TableRow = styled.div`
   display: grid;
@@ -57,17 +61,21 @@ function CabinRow({ cabin }) {
     discount,
     image,
   } = cabin;
-  const queryClient = useQueryClient();
-  const { isLoading, mutate } = useMutation({
-    mutationFn: (cabinId) => deleteCabin(cabinId),
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["cabins"],
-      });
-      toast.success("Cabin deleted succussfly");
-    },
-    onError: (error) => toast.error(error.message),
-  });
+
+  const { isCreating, createCabin } = useCreateCabin();
+
+  const { isDeleting, deleteCabin } = useDeleteCabin();
+
+  function handleDoubleCabin() {
+    createCabin({
+      name: `copy of ${name}`,
+      maxCapacity,
+      regularPrice,
+      discount,
+      image,
+    });
+  }
+
   return (
     <>
       <TableRow>
@@ -77,10 +85,16 @@ function CabinRow({ cabin }) {
         <Price>{formatCurrency(regularPrice)}</Price>
         <Discount>{formatCurrency(discount)}</Discount>
         <div>
-          <button onClick={() => setShowForm((show) => !show)}>Edit</button>
+          <button onClick={() => handleDoubleCabin()}>
+            <HiSquare2Stack />
+          </button>
 
-          <button onClick={() => mutate(cabinId)} disabled={isLoading}>
-            Delete
+          <button onClick={() => setShowForm((show) => !show)}>
+            <HiPencil />
+          </button>
+
+          <button onClick={() => deleteCabin(cabinId)} disabled={isDeleting}>
+            <HiTrash />
           </button>
         </div>
       </TableRow>

@@ -6,16 +6,16 @@ import { PAGE_SIZE } from "../../utils/constants";
 export function useBookings() {
   const queryClient = useQueryClient();
   const [searchParams] = useSearchParams();
-  const filterValue = searchParams.get("status");
   //sort
   const sortByRow = searchParams.get("sortBy") || "startDate-desc";
   const [field, direction] = sortByRow.split("-");
   const sortBy = { field, direction };
   //filter
+  const filterValue = searchParams.get("status");
   const filter =
     !filterValue || filterValue == "all"
       ? null
-      : { field: "status", value: filterValue, method: "gte" };
+      : { field: "status", value: filterValue };
 
   //pagination
   const page = !searchParams.get("page") ? 1 : Number(searchParams.get("page"));

@@ -1,42 +1,60 @@
-# The Wild Oasis
+#  The Wild Oasis
 
-this is an application to manage everything about the wild oasis hotel:booking ,kabines , guests
+##  Overview
+The Wild Oasis is an internal hotel management application designed to manage all operations of the hotel.  
+It allows staff to handle bookings, cabins, and guest check-ins efficiently through a clean and user-friendly interface.
 
-This is the internal application used inside the
-hotel to check in guests as they arrive
+---
 
-# Technology
+##  Features
+-  Manage hotel bookings   
+-  Manage cabins (add, update, delete)  
+-  Guest management system  
+-  Check-in / Check-out functionality  
+-  Dashboard with key insights  
+-  Fast and responsive user experience  
 
-### styling
+---
 
-- Styled Components libarary which is very popular way of whriting components-scoped css,right inside javascript
+##  Tech Stack
 
-### react-router-dom
+###  Frontend
+- React.js  
+- React Router DOM (SPA navigation)  
+- Styled Components (component-scoped CSS)  
 
-- standard for react SPAs
+###  State Management & Data Fetching
+- React Query (server state management & caching)  
 
-### Supabase
+###  Forms Handling
+- React Hook Form (efficient form handling & validation)  
 
-- building a backend using supabase
+###  Backend
+- Supabase (database + backend services)  
 
-### React Query
+---
 
-- for managing all remote state like fetching the data from the server
+##  Other Tools
+- React Icons  
+- date-fns  
+- react-hot-toast  
 
-### React Hook Form
+---
 
-- for handle the forms in the website
+##  What I Learned
+Through this project, I practiced:
 
-### other tools
+- Building a real-world admin dashboard  
+- Managing remote server state using **React Query**  
+- Structuring scalable React applications  
+- Handling complex forms using **React Hook Form**  
+- Writing clean and maintainable styles with **Styled Components**  
+- Integrating a full backend using **Supabase**  
 
-- react icons /date-fns /react-hot-toast
+---
 
-# React + Vite
+##  Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-  "# the-wild-oasis"
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/the-wild-oasis.git
